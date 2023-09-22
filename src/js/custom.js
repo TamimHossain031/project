@@ -1,5 +1,5 @@
 let parentChild = document.querySelector('.animation');
-let blog = 500;
+let blog = 300;
 
 let screenWidth = screen.width;
 let screenHeight = screen.height-150;
