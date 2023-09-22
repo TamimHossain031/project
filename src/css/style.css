@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Mukta:wght@200;400&display=swap');
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+body{
+    font-family: 'Mukta', sans-serif;
+}
+hr{
+border-bottom:0.8px solid #ffffff73;
+width:100%;
+margin-block:40px;
+}
+.card-area{
+    width:100%;
+    height:100dvh;
+    overflow: hidden;
+}
+#card{
+    width:100%;
+    height:100dvh;
+    position:relative;
+    background:linear-gradient(to right,#F7A298,#016BEB);    
+    display:flex;
+    align-items: center;
+    text-align:center;
+    justify-content:center;
+    color:#ffffffc2;
+    text-transform:uppercase;
+    overflow: hidden;
+}
+.single-card{
+    width:535px;
+    height:375px;
+    background-color: #324257;
+    border:1px solid #324257;
+    border-radius:10px;
+    padding:50px;
+    display:flex;
+    flex-direction:column;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.Name{
+    font-size:20px;
+    font-weight:200;
+    letter-spacing:0.2em;
+}
+.content{
+    font-size:11px;
+    font-weight:400;
+    letter-spacing:0.2em;
+    color:rgba(194, 196, 197, 0.699);
+}
+.social{
+    margin-top:30px;
+    display: flex;
+}
+.social span{
+    position:relative;
+    width:50px;
+    height:50px;
+    display:flex;    
+    justify-content:center;
+    align-items:center;
+    background-color: hsla(var(--bgcolor),0.6);
+    padding:8px;    
+    transition: 0.3s all ease-in-out;
+    border-radius:50%;
+    margin:0 15px;
+}
+.social span a{
+    text-decoration:none;
+    font-size:22px;
+    display:inline-block;
+    color:#fff;
+}
+.social span:hover{
+    background-color: hsla(var(--bgcolor),1);
+    cursor:pointer;
+}
+.animation{
+    position:absolute;
+    top:0;
+    left:0;
+    width:100%;
+    height:100dvh;
+    
+    z-index:1;
+}
+.animation span:nth-child(odd){
+    position:absolute;
+    
+    width:20px;
+    height:20px;
+    opacity: 0;
+    background:#ffffff20;
+    animation-name: oh;
+    animation-duration:4s;
+    
+    animation-iteration-count: infinite;
+}
+
+@keyframes oh {
+    0%   {opacity: 0;}
+    20%  {opacity: 0.20;}
+    40%  {opacity: 0.40;}
+    60%  {opacity: 0.50;}
+    80%  {opacity: 0.35;}
+    100% {opacity: 0.15;}
+}
+.animation span:nth-child(even){
+    position:absolute;    
+    width:20px;
+    height:20px;
+    opacity: 0;
+    background:#ffffff20;
+    animation-name: yes;
+    animation-duration:4s;    
+    animation-iteration-count: infinite;
+}
+
+@keyframes yes {
+    0%   {opacity: 0;}
+    25%  {opacity: 0.5;}
+    50%  {opacity: 0.75;}
+    60%  {opacity: 0.25;}
+    80%  {opacity: 0.5;}
+    100% {opacity: 0;}
+}
